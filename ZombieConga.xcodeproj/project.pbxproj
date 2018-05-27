@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0B143EB320B916B000D17733 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B143EB220B916B000D17733 /* AppDelegate.swift */; };
-		0B143EB520B916B000D17733 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0B143EB420B916B000D17733 /* GameScene.sks */; };
 		0B143EB720B916B000D17733 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0B143EB620B916B000D17733 /* Actions.sks */; };
 		0B143EB920B916B000D17733 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B143EB820B916B000D17733 /* GameScene.swift */; };
 		0B143EBB20B916B000D17733 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B143EBA20B916B000D17733 /* GameViewController.swift */; };
@@ -16,6 +15,8 @@
 		0B143EC020B916B200D17733 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B143EBF20B916B200D17733 /* Assets.xcassets */; };
 		0B143EC320B916B200D17733 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B143EC120B916B200D17733 /* LaunchScreen.storyboard */; };
 		0B143ECE20B916B200D17733 /* ZombieCongaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B143ECD20B916B200D17733 /* ZombieCongaTests.swift */; };
+		0B143ED920B951CC00D17733 /* Zombie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B143ED820B951CC00D17733 /* Zombie.swift */; };
+		0B143EDB20B9901300D17733 /* MyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B143EDA20B9901300D17733 /* MyUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +32,6 @@
 /* Begin PBXFileReference section */
 		0B143EAF20B916B000D17733 /* ZombieConga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZombieConga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B143EB220B916B000D17733 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0B143EB420B916B000D17733 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		0B143EB620B916B000D17733 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		0B143EB820B916B000D17733 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		0B143EBA20B916B000D17733 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +42,8 @@
 		0B143EC920B916B200D17733 /* ZombieCongaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZombieCongaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B143ECD20B916B200D17733 /* ZombieCongaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZombieCongaTests.swift; sourceTree = "<group>"; };
 		0B143ECF20B916B200D17733 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B143ED820B951CC00D17733 /* Zombie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zombie.swift; sourceTree = "<group>"; };
+		0B143EDA20B9901300D17733 /* MyUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,10 +86,11 @@
 			isa = PBXGroup;
 			children = (
 				0B143EB220B916B000D17733 /* AppDelegate.swift */,
-				0B143EB420B916B000D17733 /* GameScene.sks */,
 				0B143EB620B916B000D17733 /* Actions.sks */,
 				0B143EB820B916B000D17733 /* GameScene.swift */,
 				0B143EBA20B916B000D17733 /* GameViewController.swift */,
+				0B143ED820B951CC00D17733 /* Zombie.swift */,
+				0B143EDA20B9901300D17733 /* MyUtils.swift */,
 				0B143EBC20B916B000D17733 /* Main.storyboard */,
 				0B143EBF20B916B200D17733 /* Assets.xcassets */,
 				0B143EC120B916B200D17733 /* LaunchScreen.storyboard */,
@@ -187,7 +190,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B143EBE20B916B000D17733 /* Main.storyboard in Resources */,
-				0B143EB520B916B000D17733 /* GameScene.sks in Resources */,
 				0B143EC020B916B200D17733 /* Assets.xcassets in Resources */,
 				0B143EC320B916B200D17733 /* LaunchScreen.storyboard in Resources */,
 				0B143EB720B916B000D17733 /* Actions.sks in Resources */,
@@ -209,6 +211,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B143EB920B916B000D17733 /* GameScene.swift in Sources */,
+				0B143EDB20B9901300D17733 /* MyUtils.swift in Sources */,
+				0B143ED920B951CC00D17733 /* Zombie.swift in Sources */,
 				0B143EBB20B916B000D17733 /* GameViewController.swift in Sources */,
 				0B143EB320B916B000D17733 /* AppDelegate.swift in Sources */,
 			);
