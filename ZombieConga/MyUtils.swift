@@ -12,6 +12,7 @@ func + (left: CGPoint, right: CGPoint) -> CGPoint {
     return CGPoint(x: left.x + right.x, y: left.y + right.y)
 }
 
+//这里的left值会有改变，所以类型声明时要加inout
 func += ( left: inout CGPoint, right: CGPoint) {
     left = left + right
 }

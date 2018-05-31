@@ -22,7 +22,8 @@ class GameScene: SKScene {
     var lastTouchLocation: CGPoint?
     
     override init(size: CGSize) {
-        let maxAspectRatio:CGFloat = 16.0/9.0 // 1
+        let screenBounds = UIScreen.main.bounds
+        let maxAspectRatio:CGFloat = screenBounds.size.width/screenBounds.size.height // 1
         let playableHeight = size.width / maxAspectRatio // 2
         let playableMargin = (size.height-playableHeight)/2.0 // 3
         playableRect = CGRect(x: 0, y: playableMargin,
@@ -93,8 +94,8 @@ class GameScene: SKScene {
     
     func rotateSprite(sprite: SKSpriteNode, direction: CGPoint) {
         sprite.zRotation = direction.angle
-//        sprite.zRotation = CGFloat(
-//            atan2(Double(direction.y), Double(direction.x)))
+        sprite.zRotation = CGFloat(
+            atan2(Double(direction.y), Double(direction.x)))
     }
     
     func boundsCheckZombie() {
