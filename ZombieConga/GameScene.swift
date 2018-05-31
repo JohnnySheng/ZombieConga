@@ -85,7 +85,7 @@ class GameScene: SKScene {
                 velocity = CGPoint.zero
             } else {
                 moveSprite(zombie, velocity: velocity)
-                rotateSprite(sprite: zombie, direction: velocity)
+                rotateSprite(sprite: zombie, direction: velocity, rotateRadiansPerSec: zombieMovePointPerSec)
             }
         }
         
@@ -138,7 +138,9 @@ class GameScene: SKScene {
     func rotateSprite(sprite: SKSpriteNode, direction: CGPoint,
                       rotateRadiansPerSec: CGFloat) {
         // Your code here!
-        
+        let shortest = shortestAngleBetween(angle1: sprite.zRotation, angle2: direction.angle)
+        let amountToRotate = min(rotateRadiansPerSec * CGFloat(dt), abs(shortest))
+        sprite.zRotation += shortest.sign() * amountToRotate
     }
     
     func sceneTouched(touchLocation:CGPoint) {
